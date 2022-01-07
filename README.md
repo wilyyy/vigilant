@@ -38,7 +38,7 @@ Then go to https://github.com/wilyyy/CompassPlus and merge your branch to the ma
 
 While making sure you are on your branch, put the following command into your terminal to pull the latest changes from the master branch onto your computer
 		
-	git pull origin master
+	git pull origin main
 
 If there have been any new dependencies installed since you last pulled from master, remember that you can use the 'yarn install' command to install all that is missing from your local version of the app.
 
