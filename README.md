@@ -32,7 +32,7 @@ Put the following into your terminal
 	git commit -m "write a message describing the change you made"
 	git push origin branch-name
 			
-Then go to https://github.com/wilyyy/CompassPlus and merge your branch to the master branch using a pull request and merge.
+Then go to https://github.com/wilyyy/vigilant and merge your branch to the master branch using a pull request and merge.
 
 ### PULLING LATEST VERSION OF THE APP INTO YOUR LOCAL MACHINE
 
