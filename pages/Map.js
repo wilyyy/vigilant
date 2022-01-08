@@ -21,18 +21,17 @@ const Map = () => {
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
     console.log(currentRegions);
 
-    // filter test
-    // const numbers = [98, 76, 23, 432, 22, 12, 203, 100, 1000, 982, 1029, 100, 1092];
-    // const filterNumbers = numbers.filter(numbers => (
-    //     (numbers >= 100 && numbers <=1000)
-    // ));
-
-    // console.log(filterNumbers);
-
     /*⚙️⚙️⚙️⚙️⚙️ higher order functions for our objects ⚙️⚙️⚙️⚙️⚙️ */
-    const KitsilanoMarkers = [];
-    const UBCMarkers = [];
-    const DowntownMarkers = [];
+    const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
+    const KitsMarkers = MarkerObjects.filter(marker => marker.id === 1);
+    const DowntownMarkers = MarkerObjects.filter(marker => marker.id === 2);
+    
+    console.log("UBC Objects");
+    console.log(UBCMarkers);
+    console.log("Kitsilano Objects");
+    console.log(KitsMarkers);
+    console.log("Downtown Objects");
+    console.log(DowntownMarkers);
 
     /*🌎🌎🌎🌎🌎 google maps config tings 🌎🌎🌎🌎🌎*/
     const MapProps = {
@@ -49,6 +48,9 @@ const Map = () => {
 
     return (
         <Page>
+            <button onClick={()=>{setAllMarkers(DowntownMarkers)}}>
+                Downtown Markers
+            </button>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
