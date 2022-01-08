@@ -32,7 +32,7 @@ export const Regions = [
         name: "Downtown Eastside"
     },
     {
-        id: 4,
+        id: 5,
         name: "North Vancouver"
     }
 ];
@@ -41,16 +41,10 @@ export const Regions = [
 //make hella crime objects
 export const MarkerObjects = [
     {
-        id: 0,
-        type: "brrrrr",
-        info: "watch out there was a shooting near Cardero's restaurant",
-        lat: 49.2727,
-        lng: -123.116226
-    },
-    {
         id: 2,
         type: "Shooting",
         info: "watch out there was a shooting near Cardero's restaurant",
+        date: "posted on December 1st, 3:21pm",
         lat: 49.2827,
         lng: -123.116226
     },
@@ -58,6 +52,15 @@ export const MarkerObjects = [
         id: 2,
         type: "Robbery",
         info: "watch out there was a shooting near Cardero's restaurant",
+        date: "posted on December 1st, 3:21pm",
+        lat: 49.2905,
+        lng: -123.116226
+    },
+    {
+        id: 5,
+        type: "Bear Attack",
+        info: "very aggressive grizzly bears spotted here",
+        date: "posted on August 21st, 9:21am",
         lat: 49.3827,
         lng: -123.126226
     }

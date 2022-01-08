@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState } from "react";
 import GoogleMapReact from 'google-map-react';
+import { motion } from 'framer-motion';
 
 import { MapStyleDark } from '../public/MapStyles';
 import { Regions, MarkerObjects } from '../public/Objects';
@@ -8,32 +9,23 @@ import MapMarker from '../comps/MapMarker';
 
 // https://github.com/google-map-react/google-map-react 
 
-const Page = styled.div`
+const Page = styled(motion.div)`
     width: 100vw;
     height: 100vh;
 `;
 
-const MarkerCont = styled.div``;
-
 const Map = () => {
-
-    const [currentRegions, setCurrentRegions] = useState(Regions);
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
-    console.log(currentRegions);
 
-    /*⚙️⚙️⚙️⚙️⚙️ higher order functions for our objects ⚙️⚙️⚙️⚙️⚙️ */
+    /*⚙️⚙️⚙️⚙️⚙️ HIGHER ORDER METHODS ⚙️⚙️⚙️⚙️⚙️ */
     const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
     const KitsMarkers = MarkerObjects.filter(marker => marker.id === 1);
     const DowntownMarkers = MarkerObjects.filter(marker => marker.id === 2);
-    
-    console.log("UBC Objects");
-    console.log(UBCMarkers);
-    console.log("Kitsilano Objects");
-    console.log(KitsMarkers);
-    console.log("Downtown Objects");
-    console.log(DowntownMarkers);
+    const EastVanMarkers = MarkerObjects.filter(marker => marker.id === 3);
+    const EastSideMarkers = MarkerObjects.filter(marker => marker.id === 4);
+    const NorthVanMarkers = MarkerObjects.filter(marker => marker.id === 5);
 
-    /*🌎🌎🌎🌎🌎 google maps config tings 🌎🌎🌎🌎🌎*/
+    /*🌎🌎🌎🌎🌎 GOOGLE MAPS CONFIG 🌎🌎🌎🌎🌎*/
     const MapProps = {
         center: {
             lat: 49.2827,
@@ -47,7 +39,21 @@ const Map = () => {
     }
 
     return (
-        <Page>
+        <Page
+            initial="pageInitial" 
+            animate="pageAnimate" 
+            variants={{
+                pageInitial: {
+                    opacity: 0
+                },
+                pageAnimate: {
+                    opacity: 1
+                },
+            }}
+        >
+            <button onClick={()=>{setAllMarkers(MarkerObjects)}}>
+                All Markers
+            </button>
             <button onClick={()=>{setAllMarkers(DowntownMarkers)}}>
                 Downtown Markers
             </button>
@@ -64,7 +70,9 @@ const Map = () => {
                             key={i}
                             lat={o.lat}
                             lng={o.lng}
-                            text={o.type}
+                            type={o.type}
+                            information={o.info}
+                            date={o.date}
                         />
                     ))
                 }
