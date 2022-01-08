@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { useState } from "react";
 import GoogleMapReact from 'google-map-react';
+
 import { MapStyleDark } from '../public/MapStyles';
-
 import { Regions, MarkerObjects } from '../public/Objects';
-
+import MapMarker from '../comps/MapMarker';
 
 // https://github.com/google-map-react/google-map-react 
 
@@ -13,18 +13,21 @@ const Page = styled.div`
     height: 100vh;
 `;
 
+const MarkerCont = styled.div``;
+
 const Map = () => {
 
     const [currentRegions, setCurrentRegions] = useState(Regions);
+    const [allMarkers, setAllMarkers] = useState(MarkerObjects);
     console.log(currentRegions);
 
     // filter test
-    const numbers = [98, 76, 23, 432, 22, 12, 203, 100, 1000, 982, 1029, 100, 1092];
-    const filterNumbers = numbers.filter(numbers => (
-        (numbers >= 100 && numbers <=1000)
-    ));
+    // const numbers = [98, 76, 23, 432, 22, 12, 203, 100, 1000, 982, 1029, 100, 1092];
+    // const filterNumbers = numbers.filter(numbers => (
+    //     (numbers >= 100 && numbers <=1000)
+    // ));
 
-    console.log(filterNumbers);
+    // console.log(filterNumbers);
 
     /*⚙️⚙️⚙️⚙️⚙️ higher order functions for our objects ⚙️⚙️⚙️⚙️⚙️ */
     const KitsilanoMarkers = [];
@@ -46,7 +49,6 @@ const Map = () => {
 
     return (
         <Page>
-            <p>{filterNumbers}</p>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
@@ -54,6 +56,16 @@ const Map = () => {
                 yesIWantToUseGoogleMapApiInternals
                 options={MapOptions}
             >
+                {
+                    allMarkers.map((o, i) => (
+                        <MapMarker
+                            key={i}
+                            lat={o.lat}
+                            lng={o.lng}
+                            text={o.type}
+                        />
+                    ))
+                }
             </GoogleMapReact>
         </Page>
     )

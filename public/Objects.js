@@ -35,6 +35,15 @@ export const MarkerObjects = [
     {
         id: 2,
         type: "Shooting",
-        info: "watch out there was a shooting near Cardero's restaurant"
+        info: "watch out there was a shooting near Cardero's restaurant",
+        lat: 49.2827,
+        lng: -123.116226
+    },
+    {
+        id: 2,
+        type: "Robbery",
+        info: "watch out there was a shooting near Cardero's restaurant",
+        lat: 49.3827,
+        lng: -123.126226
     }
 ];
