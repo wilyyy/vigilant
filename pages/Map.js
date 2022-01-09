@@ -65,7 +65,16 @@ const Map = () => {
                 Downtown Markers
             </button> */}
             <SidebarCont>
-                <Sidebar array={allMarkers}/>
+                <Sidebar 
+                    array={allMarkers}
+                    onAllClick={()=>{setAllMarkers(MarkerObjects)}}
+                    onUBCClick={()=>{setAllMarkers(UBCMarkers)}}
+                    onKitsClick={()=>{setAllMarkers(KitsMarkers)}}
+                    onDowntownClick={()=>{setAllMarkers(DowntownMarkers)}}
+                    onEastVanClick={()=>{setAllMarkers(EastVanMarkers)}}
+                    onEastSideClick={()=>{setAllMarkers(EastSideMarkers)}}
+                    onNorthVanClick={()=>{setAllMarkers(NorthVanMarkers)}}
+                />
             </SidebarCont>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}

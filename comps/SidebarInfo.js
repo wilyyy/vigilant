@@ -11,6 +11,19 @@ const Container = styled.div`
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 3px;
+
+    ::-webkit-scrollbar {
+        background-color: #000;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF6700;
+        border-radius: 20px;
+    }
 `;
 
 const SidebarInfo = ({
