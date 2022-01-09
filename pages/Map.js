@@ -6,12 +6,19 @@ import { motion } from 'framer-motion';
 import { MapStyleDark } from '../public/MapStyles';
 import { Regions, MarkerObjects } from '../public/Objects';
 import MapMarker from '../comps/MapMarker';
+import Sidebar from '../comps/Sidebar';
 
 // https://github.com/google-map-react/google-map-react 
 
 const Page = styled(motion.div)`
     width: 100vw;
     height: 100vh;
+`;
+
+const SidebarCont = styled.div`
+    position: absolute;
+    left: 0;
+    z-index: 200;
 `;
 
 const Map = () => {
@@ -51,12 +58,15 @@ const Map = () => {
                 },
             }}
         >
-            <button onClick={()=>{setAllMarkers(MarkerObjects)}}>
+            {/* <button onClick={()=>{setAllMarkers(MarkerObjects)}}>
                 All Markers
             </button>
             <button onClick={()=>{setAllMarkers(DowntownMarkers)}}>
                 Downtown Markers
-            </button>
+            </button> */}
+            <SidebarCont>
+                <Sidebar array={allMarkers}/>
+            </SidebarCont>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
