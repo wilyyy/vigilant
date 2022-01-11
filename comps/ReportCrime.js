@@ -29,8 +29,8 @@ const ReportCrime = () => {
     return (
         <Container>
             <h1>Report Crime</h1>
-            <Button onclick="myFunction()"><img src="/img/whh_gun.png"></img></Button>
-            <Button onclick="myFunction()"><img src="img/whh_gun.png"></img></Button>
+            <Button onclick="myFunction()"><img src="whh_gun.png" ></img></Button>
+            <Button onclick="myFunction()"><img src="fa-solid_user-injured.png"></img></Button>
             <Button onclick="myFunction()"><img src="whh_gun.png"></img></Button>
             <Button onclick="myFunction()"><img src="whh_gun.png"></img></Button>
             <Button onclick="myFunction()"><img src="whh_gun.png"></img></Button>
