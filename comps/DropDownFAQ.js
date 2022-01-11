@@ -23,7 +23,7 @@ const DropdownContent = styled.div`
 display: none;
 position: absolute;
 background-color: Grey;
-border: solid 2px rgba(255, 103, 0, 0.7);
+border: outset 3px rgba(255, 103, 0, 0.7);
 width: 500px;
 height: 250px;
 padding: 12px 16px;
@@ -34,7 +34,7 @@ const DropdownBox = styled.div`
 width:500px;
 height:40px;
 background-color: #101010;
-border: solid 2px rgba(255, 103, 0, 0.7);
+border: outset 5px rgba(255, 103, 0, 0.7);
 text-align:center;
 color: White;
 border-radius: 20px;

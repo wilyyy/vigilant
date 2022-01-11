@@ -41,8 +41,8 @@ const Header = () => {
             </LogoCont>
 
             <ButtonCont>
-                <HeaderButton></HeaderButton>
-                <HeaderButton bgcolor='#FCF0E8' src={"/question.png"}></HeaderButton>
+                <HeaderButton bgcolor='#FCF0E8'imgsrc='question.png'></HeaderButton>
+                <HeaderButton bgcolor='#E9F4FF'></HeaderButton>
             </ButtonCont>
         </MainCont>
     )
