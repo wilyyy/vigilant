@@ -24,7 +24,6 @@ const SidebarCont = styled.div`
 const Map = () => {
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
 
-    /*⚙️⚙️⚙️⚙️⚙️ HIGHER ORDER METHODS ⚙️⚙️⚙️⚙️⚙️ */
     const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
     const KitsMarkers = MarkerObjects.filter(marker => marker.id === 1);
     const DowntownMarkers = MarkerObjects.filter(marker => marker.id === 2);
@@ -32,7 +31,6 @@ const Map = () => {
     const EastSideMarkers = MarkerObjects.filter(marker => marker.id === 4);
     const NorthVanMarkers = MarkerObjects.filter(marker => marker.id === 5);
 
-    /*🌎🌎🌎🌎🌎 GOOGLE MAPS CONFIG 🌎🌎🌎🌎🌎*/
     const MapProps = {
         center: {
             lat: 49.2827,
@@ -58,12 +56,6 @@ const Map = () => {
                 },
             }}
         >
-            {/* <button onClick={()=>{setAllMarkers(MarkerObjects)}}>
-                All Markers
-            </button>
-            <button onClick={()=>{setAllMarkers(DowntownMarkers)}}>
-                Downtown Markers
-            </button> */}
             <SidebarCont>
                 <Sidebar 
                     array={allMarkers}

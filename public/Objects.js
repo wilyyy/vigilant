@@ -1,15 +1,3 @@
-/* big brain algorithm 
-
-Map regions.name into filter flatlist comp, with each option having
-an onPress prop.
-
-Every region will be filtered into different arrays.
-
-change region state depending on region id.
-
-*/
-
-//Look at an actual map and add more regions (Vancouver only)
 export const Regions = [
     {
         id: 0,
@@ -36,7 +24,6 @@ export const Regions = [
         name: "North Vancouver"
     }
 ];
-
 
 //make hella crime objects
 export const MarkerObjects = [
