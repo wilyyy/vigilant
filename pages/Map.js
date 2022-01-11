@@ -7,8 +7,7 @@ import { MapStyleDark } from '../public/MapStyles';
 import { Regions, MarkerObjects } from '../public/Objects';
 import MapMarker from '../comps/MapMarker';
 import Sidebar from '../comps/Sidebar';
-
-// https://github.com/google-map-react/google-map-react 
+import ReportButton from '../comps/ReportButton';
 
 const Page = styled(motion.div)`
     width: 100vw;
@@ -21,10 +20,16 @@ const SidebarCont = styled.div`
     z-index: 200;
 `;
 
+const ReportCont = styled.div`
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    z-index: 200;
+`;
+
 const Map = () => {
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
 
-    /*⚙️⚙️⚙️⚙️⚙️ HIGHER ORDER METHODS ⚙️⚙️⚙️⚙️⚙️ */
     const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
     const KitsMarkers = MarkerObjects.filter(marker => marker.id === 1);
     const DowntownMarkers = MarkerObjects.filter(marker => marker.id === 2);
@@ -32,7 +37,6 @@ const Map = () => {
     const EastSideMarkers = MarkerObjects.filter(marker => marker.id === 4);
     const NorthVanMarkers = MarkerObjects.filter(marker => marker.id === 5);
 
-    /*🌎🌎🌎🌎🌎 GOOGLE MAPS CONFIG 🌎🌎🌎🌎🌎*/
     const MapProps = {
         center: {
             lat: 49.2827,
@@ -58,12 +62,6 @@ const Map = () => {
                 },
             }}
         >
-            {/* <button onClick={()=>{setAllMarkers(MarkerObjects)}}>
-                All Markers
-            </button>
-            <button onClick={()=>{setAllMarkers(DowntownMarkers)}}>
-                Downtown Markers
-            </button> */}
             <SidebarCont>
                 <Sidebar 
                     array={allMarkers}
@@ -76,6 +74,9 @@ const Map = () => {
                     onNorthVanClick={()=>{setAllMarkers(NorthVanMarkers)}}
                 />
             </SidebarCont>
+            <ReportCont>
+                <ReportButton />
+            </ReportCont>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
