@@ -7,8 +7,7 @@ import { MapStyleDark } from '../public/MapStyles';
 import { Regions, MarkerObjects } from '../public/Objects';
 import MapMarker from '../comps/MapMarker';
 import Sidebar from '../comps/Sidebar';
-
-// https://github.com/google-map-react/google-map-react 
+import ReportButton from '../comps/ReportButton';
 
 const Page = styled(motion.div)`
     width: 100vw;
@@ -18,6 +17,13 @@ const Page = styled(motion.div)`
 const SidebarCont = styled.div`
     position: absolute;
     left: 0;
+    z-index: 200;
+`;
+
+const ReportCont = styled.div`
+    position: absolute;
+    top: 2%;
+    right: 4%;
     z-index: 200;
 `;
 
@@ -68,6 +74,9 @@ const Map = () => {
                     onNorthVanClick={()=>{setAllMarkers(NorthVanMarkers)}}
                 />
             </SidebarCont>
+            <ReportCont>
+                <ReportButton />
+            </ReportCont>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
