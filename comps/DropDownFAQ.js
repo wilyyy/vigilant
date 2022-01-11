@@ -3,7 +3,7 @@ import { ArrowDownShort } from '@styled-icons/bootstrap/ArrowDownShort';
 
 const Dropdown = styled.div`
 position: relative;
-display: inline-block;
+display: flex;
 
 &:hover {
   display: block;
@@ -31,6 +31,7 @@ z-index: 1;
 `;
 
 const DropdownBox = styled.div`
+display: flex;
 width:500px;
 height:40px;
 background-color: #101010;
