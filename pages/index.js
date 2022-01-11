@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+
 import Header from '../comps/Header';
+import DropdownFAQ from '../comps/DropDownFAQ'
 
 const MainCont = styled.div`
   display: flex;
@@ -53,6 +55,7 @@ export default function Home() {
     <InfoCont>
       <Title>Vigilant</Title>
       <Description>Two week javascript refresher for web development 4. Created by William Alvarez, Josh Reyes, Aryan Heravi, and Maggie Su.</Description>
+      
       <button onClick={()=>{router.push('/Map')}}>Go Map</button>
 
     </InfoCont>
