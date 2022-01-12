@@ -4,10 +4,8 @@ import styled from "styled-components"
 
 const Space = styled.div`
 display: flex;
-flex-direction: row;
-margin: 20px;
+margin-bottom: 275px;
 align-items: center;
-padding: 50px;
 justify-content: space-between;
 `
 
@@ -25,13 +23,11 @@ export default function FAQ() {
       <DropdownFAQ BoxText="What is the emergency number?"/>
       <DropdownFAQ BoxText="I need help!!"/>
       </Space>
-      <br></br><br></br><br></br><br></br><br></br><br></br>
       <Space>
       <DropdownFAQ BoxText="Best places to contact?"/>
       <DropdownFAQ BoxText="Do you know where my mom is?"/>
       <DropdownFAQ BoxText="A person is following me"/>
       </Space>
-      <br></br><br></br><br></br><br></br><br></br><br></br>
       <Space>
       <DropdownFAQ BoxText="SlenderMan"/>
       <DropdownFAQ BoxText="Donald Trump"/>

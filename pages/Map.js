@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useState } from "react";
 import GoogleMapReact from 'google-map-react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import { MapStyleDark } from '../public/MapStyles';
 import { Regions, MarkerObjects } from '../public/Objects';
@@ -29,6 +30,7 @@ const ReportCont = styled.div`
 `;
 
 const Map = () => {
+    const router = useRouter();
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
 
     const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
@@ -49,6 +51,7 @@ const Map = () => {
     const MapOptions = {
         styles: MapStyleDark
     }
+
 
     return (
         <Page
@@ -76,7 +79,7 @@ const Map = () => {
                 />
             </SidebarCont>
             <ReportCont>
-                <ReportButton />
+                <ReportButton onClick={()=>{router.push('/faq')}}/>
             </ReportCont>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
