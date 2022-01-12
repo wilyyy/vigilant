@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import Header from '../comps/Header';
+import Navigation from '../comps/Navigation';
 
 const MainCont = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const MainCont = styled.div`
   flex-direction: row;
   background-color: #000;
   width: 100%;
-  height: 750px;
+  height: 800px;
 `;
 
 const InnerCont = styled.div`
@@ -37,6 +37,7 @@ const InfoCont = styled.div`
 
 const Title = styled.h1`
   color: #fff;
+  font-size: 36px;
 `;
 
 const Description = styled.h3`
@@ -51,17 +52,15 @@ export default function Home() {
 
   return (
     <MainCont>
-      {/* <Header/> */}
       <InnerCont>
         <ImageCont>
           <Image src="/VigilantLogo.png" />
         </ImageCont>
-
         <InfoCont>
           <Title>Vigilant</Title>
           <Description>Two week javascript refresher for web development 4. Created by William Alvarez, Josh Reyes, Aryan Heravi, and Maggie Su.</Description>
           <StartBut>
-            <button onClick={() => { router.push('/Map') }}>Go to Map</button>
+            <button style={{width:"110px", height:"40px", fontSize:"16px", marginTop:"30px"}} onClick={() => { router.push('/Map') }}>Go to Map</button>
           </StartBut>
         </InfoCont>
 
