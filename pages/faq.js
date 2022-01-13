@@ -1,7 +1,6 @@
-import Header from "../comps/Header"
+// import Header from "../comps/Header"
 import DropdownFAQ from "../comps/DropDownFAQ"
 import styled from "styled-components"
-
 
 const Space = styled.div`
 display: flex;
@@ -17,7 +16,7 @@ export default function FAQ() {
 
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
       <br></br><br></br>
       <Space>
       <DropdownFAQ BoxText="How do you find crime?"/>

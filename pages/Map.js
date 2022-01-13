@@ -9,6 +9,7 @@ import { Regions, MarkerObjects } from '../public/Objects';
 import MapMarker from '../comps/MapMarker';
 import Sidebar from '../comps/Sidebar';
 import ReportButton from '../comps/ReportButton';
+import Navigation from "../comps/Navigation";
 
 const Page = styled(motion.div)`
     width: 100vw;
