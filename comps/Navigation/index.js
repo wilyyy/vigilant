@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 
 const MainCont = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: linear-gradient(360deg, rgba(16, 16, 16, 0.7) 8.43%, rgba(0, 0, 0, 0.9) 100%);
     box-shadow: inset 0px -4px 5px rgba(200, 200, 200, 0.2);
     border: none;
-    width: 350px;
+    width: 380px;
     height: 80px;
 `;
 
@@ -44,9 +44,10 @@ const ReportCont = styled.div`
 
 const Image = styled.img`
     margin: 10px;
-    width: 50px;
+    width: 40px;
     &:hover {
-        width: 70px;
+        width: 60px;
+        transition: 0.5s;
     }
 `;
 

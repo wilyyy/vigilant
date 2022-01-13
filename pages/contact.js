@@ -5,7 +5,8 @@ import Header from '../comps/Header'
 
 export default function Contact() {
     return(
-        <><Header></Header><div className={styles.container}>
+        <><Header></Header>
+        <div className={styles.container}>
 
             <form className={styles.main}>
                 <h1>Contact Form</h1>

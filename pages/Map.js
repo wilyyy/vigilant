@@ -22,7 +22,7 @@ const SidebarCont = styled.div`
     z-index: 200;
 `;
 
-const ReportCont = styled.div`
+const NavCont = styled.div`
     position: absolute;
     top: 2%;
     right: 4%;
@@ -66,6 +66,9 @@ const Map = () => {
                 },
             }}
         >
+            <NavCont>
+                <Navigation />
+            </NavCont>
             <SidebarCont>
                 <Sidebar 
                     array={allMarkers}
@@ -78,9 +81,9 @@ const Map = () => {
                     onNorthVanClick={()=>{setAllMarkers(NorthVanMarkers)}}
                 />
             </SidebarCont>
-            <ReportCont>
+            {/* <ReportCont>
                 <ReportButton onClick={()=>{router.push('/faq')}}/>
-            </ReportCont>
+            </ReportCont> */}
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}
