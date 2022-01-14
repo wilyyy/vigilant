@@ -137,3 +137,42 @@ export const MarkerObjects = [
         lng: -123.095226
     }
 ];
+
+export const FaqObjects = [
+    {
+        ques: "What is the emergency number?",
+        ans: "911",
+    },
+    {
+        ques: "How does Vigilant work?",
+        ans: "Vigilant works because users manually input entries into the app wherever crime occurs.",
+    },
+    {
+        ques: "Where is Vigilant available?",
+        ans: "As of now it works throughout British Columbia.",
+    },
+    {
+        ques: "Is Vigilant free?",
+        ans: "Vigilant is and always will be completely free to use.",
+    },
+    {
+        ques: "What is Vigilant?",
+        ans: "Vigilant is a crime detection application dedicated to make your area aware of any recent crime.",
+    },
+    {
+        ques: "How do I know if the user inputted information is accurate?",
+        ans: "We filter through added results to confirm and make sure everything is proper.",
+    },
+    {
+        ques: "Does it keep users anonymous?",
+        ans: "Vigilant guarantees anonymity to protect our users from harm.",
+    },
+    {
+        ques: "What type of crime is displayed?",
+        ans: "Any time of crime from animal attacks to burglary and assaults are shown.",
+    },
+    {
+        ques: "What do I do if the map does not show up?",
+        ans: "Simply close the website and reopen it.",
+    },
+];
