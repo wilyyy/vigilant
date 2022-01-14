@@ -61,7 +61,9 @@ const Text = styled.h3`
     } */
 `;
 
-const Navigation = () => {
+const Navigation = ({
+    onButtonClick = () => {}
+}) => {
     const router = useRouter();
 
     return (
@@ -81,7 +83,7 @@ const Navigation = () => {
                 <Text>FAQ</Text>
             </FaqCont>
 
-            <ReportCont onClick={() => router.push("/Map")}>
+            <ReportCont onClick={onButtonClick}>
                 <Image src={"/reportbutton.png"} />
                 <Text>Report</Text>
             </ReportCont>

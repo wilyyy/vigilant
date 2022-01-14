@@ -6,7 +6,7 @@ const Container = styled.div`
     height: 350px;
     background: grey;
     text-align: center;
-    border-radius: 10%
+    border-radius: 10%;
 `;
 
 const Button = styled.button`
