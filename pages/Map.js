@@ -32,6 +32,7 @@ const NavCont = styled.div`
 const Map = () => {
     const router = useRouter();
     const [allMarkers, setAllMarkers] = useState(MarkerObjects);
+    const [popup, setPopup] = useState(false);
 
     const UBCMarkers = MarkerObjects.filter(marker => marker.id === 0);
     const KitsMarkers = MarkerObjects.filter(marker => marker.id === 1);
@@ -81,9 +82,6 @@ const Map = () => {
                     onNorthVanClick={()=>{setAllMarkers(NorthVanMarkers)}}
                 />
             </SidebarCont>
-            {/* <ReportCont>
-                <ReportButton onClick={()=>{router.push('/faq')}}/>
-            </ReportCont> */}
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyAMCXtVRuWoHNsdh45NjCyRtbHdLCJzfdI" }}
                 defaultCenter={MapProps.center}

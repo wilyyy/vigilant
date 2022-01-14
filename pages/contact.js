@@ -1,12 +1,46 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Header from '../comps/Header'
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import { ReturnUpBack } from '@styled-icons/ionicons-outline/ReturnUpBack';
 
+const Page = styled(motion.div)``;
+
+const BackIcon = styled(ReturnUpBack)`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  left: 1.5%;
+  top: 1.5%;
+  background-color: #FF6700;
+  border-radius: 25px;
+  padding: 5px;
+
+  :hover{
+    background-color: #FFA161;
+  }
+`;
 
 export default function Contact() {
+    const router = useRouter();
+
     return(
-        <>
-            <Header></Header>
+        <Page
+            initial="pageInitial" 
+            animate="pageAnimate" 
+            variants={{
+                pageInitial: {
+                    opacity: 0
+                },
+                pageAnimate: {
+                    opacity: 1
+                },
+            }}
+        >
+            <BackIcon onClick={() => router.push("/Map")}/>
             <div className={styles.container}>
 
                 <form className={styles.main}>
@@ -30,6 +64,6 @@ export default function Contact() {
                     < input type='submit'/>
                 </form>
             </div>
-        </>
+        </Page>
     )
 }
