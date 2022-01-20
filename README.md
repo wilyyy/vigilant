@@ -4,7 +4,7 @@ https://vigilant.vercel.app/
 
 Premise of the application is for users to view crime around Vancouver. 
 
-<img src="https://im3.ezgif.com/tmp/ezgif-3-8bebbd891c.gif" />
+<img src="https://media.giphy.com/media/jn9zvMjtpvtQJEBYtZ/giphy.gif" width=533 height=300 />
 
 ## Features
 - Filter through different regions of the city
